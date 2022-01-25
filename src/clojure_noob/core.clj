@@ -13,9 +13,7 @@
 
 (defn create-person
   [name, age, role]
-  {:name name
-   :age age
-   :role role})
+  (hash-map :name name :age age :role role))
 
 (def other-person (create-person "Pedro Scooby", 30, "Surfer"))
 
