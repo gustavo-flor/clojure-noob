@@ -1,44 +1,59 @@
-# clojure-noob
+# Clojure Noob
 
-FIXME: description
+A simple project to put in practice Clojure concepts.
 
-## Installation
+## Dependencies
 
-Download from http://example.com/FIXME.
+- Java
+- Leiningen
 
 ## Usage
 
-FIXME: explanation
+Execute REPL (Read-Eval-Print Loop)
 
-    $ java -jar clojure-noob-0.1.0-standalone.jar [args]
+```sh
+$ lein repl
+```
 
-## Options
+You should see something like this:
 
-FIXME: listing of options this app accepts.
+```text
+nREPL server started on port #### on host 127.0.0.1
+REPL-y 0.5.1, nREPL 0.8.3
+Clojure 1.10.3
+Java HotSpot(TM) 64-Bit Server VM 17.0.1+12-LTS-39
+Docs: (doc function-name-here)
+      (find-doc "part-of-name-here")
+Source: (source function-name-here)
+Javadoc: (javadoc java-object-or-class-here)
+Exit: Control+D or (exit) or (quit)
+Results: Stored in vars *1, *2, *3, an exception in *e
+```
 
-## Examples
+Now inside REPL we'll execute the main class with:
 
-...
+```clojure
+(-main)
+```
 
-### Bugs
+Also, we can execute
 
-...
+```clojure
+(+ 1 2 3 4)
+;; 10
 
-### Any Other Sections
-### That You Think
-### Might be Useful
+(* 1 2 3 4)
+;; 24
 
-## License
+(first [3, 7, 1, 2])
+;; 3
 
-Copyright © 2022 FIXME
+(do (println "Hello World")
+    (- 10 5 2))
+;; Hello World
+;; 3
+```
 
-This program and the accompanying materials are made available under the
-terms of the Eclipse Public License 2.0 which is available at
-http://www.eclipse.org/legal/epl-2.0.
+> **💫 Happy Hacking!**
 
-This Source Code may also be made available under the following Secondary
-Licenses when the conditions for such availability set forth in the Eclipse
-Public License, v. 2.0 are satisfied: GNU General Public License as published by
-the Free Software Foundation, either version 2 of the License, or (at your
-option) any later version, with the GNU Classpath Exception which is available
-at https://www.gnu.org/software/classpath/license.html.
+
