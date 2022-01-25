@@ -1,6 +1,6 @@
 # Clojure Noob
 
-A simple project to put in practice Clojure concepts.
+A simple project to put Clojure concepts into practice.
 
 ## Dependencies
 
