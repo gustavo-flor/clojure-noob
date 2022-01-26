@@ -71,7 +71,7 @@ public static final String name = "Gustavo Flôr"
 On Clojure:
 
 ```clojure
-(def message "Gustavo Flôr")
+(def name "Gustavo Flôr")
 ```
 
 We don't need to define an access or var type, we just define the symbol and value and that's it.
