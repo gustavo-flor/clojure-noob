@@ -9,22 +9,26 @@
 (def caesar-cipher-shift 3)
 
 (defn bytes-by-text
+  "Get bytes list by text"
   [text]
   (map byte (char-array text)))
 
 (defn inc-bytes-by-shift
-  [byte]
-  (map #(+ % caesar-cipher-shift) byte))
+  "Increment bytes by a shift value"
+  [bytes]
+  (map #(+ % caesar-cipher-shift) bytes))
 
-(defn text-by-chars
+(defn text-by-bytes
+  "Get string by bytes list"
   [bytes]
   (apply str (map char bytes)))
 
 (defn caesar-cipher-by-text
+  "Encode Caesar Cipher by text"
   [text]
   (->> (bytes-by-text text)
        (inc-bytes-by-shift)
-       (text-by-chars)))
+       (text-by-bytes)))
 
 (def cipher-message (caesar-cipher-by-text message))
 
