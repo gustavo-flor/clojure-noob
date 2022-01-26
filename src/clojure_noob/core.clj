@@ -5,7 +5,9 @@
 
 (def character "Chewbacca")
 
-(def villains ["Lord Voldemort" "Thanos" "Darth Vader"])
+(def villains ["Lord Voldemort"
+               "Thanos"
+               "Darth Vader"])
 
 (def person {:name "Gustavo Flôr"
              :age 20
@@ -28,5 +30,8 @@
   (println (get villains (- (count villains) 2)))
   (println (if args 1 0))
   (println (get person :name))
+  (println (person :name))
+  (println (:name person))
+  (println (conj villains "Joker"))
   (println other-person)
   (println (* 1 2 3 4)))
