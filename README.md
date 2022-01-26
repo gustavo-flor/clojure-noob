@@ -56,4 +56,47 @@ Also, we can execute
 
 > **💫 Happy Hacking!**
 
+## From Java to Clojure
+
+> In Java we'll' use the `static` keyword because Clojure is a functional programming language.
+
+### Defining a variable
+
+On Java:
+
+```java
+public static final String name = "Gustavo Flôr"
+```
+
+On Clojure:
+
+```clojure
+(def message "Gustavo Flôr")
+```
+
+We don't need to define an access or var type, we just define the symbol and value and that's it.
+
+Also, in Clojure we **don't create variables**, we bind a value to a symbol. So the closes thing we can do in Java is to use the "final" keyword.
+
+---
+
+### Defining a "function"
+
+On Java:
+
+```java
+public static Object sayHello(final String person) {
+    return String.format("Hello %s!", person);    
+}
+```
+
+On Clojure:
+
+```clojure
+(defn say-hello 
+  [person] 
+  (str "Hello " person "!"))
+```
+
+
 
