@@ -1,5 +1,4 @@
-(ns clojure-noob.core
-  (:gen-class))
+(ns clojure-noob.core)
 
 (def message "I'm a little teapot!")
 
