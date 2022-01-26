@@ -15,8 +15,13 @@
 
 (defn inc-bytes-by-shift
   "Increment bytes by a shift value"
+  [bytes, shift]
+  (map #(+ % shift) bytes))
+
+(defn inc-bytes-by-caesar-cipher-shift
+  "Increment bytes by Caesar Cipher shift value"
   [bytes]
-  (map #(+ % caesar-cipher-shift) bytes))
+  (inc-bytes-by-shift bytes caesar-cipher-shift))
 
 (defn text-by-bytes
   "Get string by bytes list"
@@ -27,7 +32,7 @@
   "Encode Caesar Cipher by text"
   [text]
   (->> (bytes-by-text text)
-       (inc-bytes-by-shift)
+       (inc-bytes-by-caesar-cipher-shift)
        (text-by-bytes)))
 
 (def cipher-message (caesar-cipher-by-text message))
@@ -39,5 +44,6 @@
   (println (str "I'm " (person :age) " years old"))
   (println (str "I'm a " (get person :role)))
   (println (str "I love " (:favorite-thing person "Pizza")))
+  (println (str "Arguments passed to the function: " args))
   (println (str ":::Caesar Cipher (Shift: " caesar-cipher-shift "):::"))
   (println (str "Plaintext: " message " Ciphertext: " cipher-message)))

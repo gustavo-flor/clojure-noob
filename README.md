@@ -55,12 +55,16 @@ Also, we can execute
 ```
 
 > **💫 Happy Hacking!**
+ 
+## Learning
 
-## From Java to Clojure
+Some examples and points of interest to stay connected.
+
+### From Java to Clojure
 
 > In Java we'll' use the `static` keyword because Clojure is a functional programming language.
 
-### Defining a variable
+#### Defining a variable
 
 On Java:
 
@@ -80,7 +84,7 @@ Also, in Clojure we **don't create variables**, we bind a value to a symbol. So 
 
 ---
 
-### Defining a "function"
+#### Defining a function
 
 On Java:
 
@@ -97,6 +101,10 @@ On Clojure:
   [person] 
   (str "Hello " person "!"))
 ```
+
+First, we need to pay attention at the keyword "function", on Java we don't have functions we create methods on a class.
+
+Also, on Clojure we don't need to define a return type, because it always returns the last form evaluated (in this example, as we only have one expression, this will be the return).
 
 ## 🚧 Work In Progress...
 
