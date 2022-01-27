@@ -1,41 +1,17 @@
-(ns clojure-noob.core)
+(ns clojure-noob.core
+  (:gen-class)
+  (:require [clojure-noob.fibonacci :as fibonacci])
+  (:require [clojure-noob.caesar-cipher :as caesar-cipher]))
 
-(def message "I'm a little teapot!")
+(def plaintext "I'm a little teapot!")
+
+(def ciphertext "Khoor#Zruog")
 
 (def person {:name "Gustavo Flôr"
              :age 20
              :role "Software Engineer"})
 
-(def caesar-cipher-shift 3)
-
-(defn bytes-by-text
-  "Get bytes list by text"
-  [text]
-  (map byte (char-array text)))
-
-(defn inc-bytes-by-shift
-  "Increment bytes by a shift value"
-  [bytes, shift]
-  (map #(+ % shift) bytes))
-
-(defn inc-bytes-by-caesar-cipher-shift
-  "Increment bytes by Caesar Cipher shift value"
-  [bytes]
-  (inc-bytes-by-shift bytes caesar-cipher-shift))
-
-(defn text-by-bytes
-  "Get string by bytes list"
-  [bytes]
-  (apply str (map char bytes)))
-
-(defn caesar-cipher-by-text
-  "Encode Caesar Cipher by text"
-  [text]
-  (->> (bytes-by-text text)
-       (inc-bytes-by-caesar-cipher-shift)
-       (text-by-bytes)))
-
-(def cipher-message (caesar-cipher-by-text message))
+(def number 9)
 
 (defn -main
   "I don't do a lot ... yet."
@@ -45,5 +21,7 @@
   (println (str "I'm a " (get person :role)))
   (println (str "I love " (:favorite-thing person "Pizza")))
   (println (str "Arguments passed to the function: " args))
-  (println (str ":::Caesar Cipher (Shift: " caesar-cipher-shift "):::"))
-  (println (str "Plaintext: " message " Ciphertext: " cipher-message)))
+  (println (str "Fibonacci for " number " is " (fibonacci/calc number)))
+  (println (str ":::Caesar Cipher (Shift: " caesar-cipher/shift "):::"))
+  (println (str "Plaintext: " plaintext " Ciphertext: " (caesar-cipher/encode plaintext)))
+  (println (str "Plaintext: " (caesar-cipher/decode ciphertext) " Ciphertext: " ciphertext)))
