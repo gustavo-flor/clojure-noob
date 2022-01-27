@@ -108,3 +108,5 @@ Also, on Clojure we don't need to define a return type, because it always return
 
 ## 🚧 Work In Progress...
 
+
+> If you want more, read [**Clojure** for the **Brave** and **True**](https://www.braveclojure.com/)
