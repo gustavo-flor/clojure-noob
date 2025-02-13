@@ -16,3 +16,6 @@ pom.xml.asc
 *.iws
 *.iml
 *.ipr
+
+/.clj-kondo
+/.lsp
