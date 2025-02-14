@@ -21,7 +21,7 @@
   (println (str "I'm a " (get person :role)))
   (println (str "I love " (:favorite-thing person "Pizza")))
   (println (str "Arguments passed to the function: " args))
-  (println (str "Fibonacci for " number " is " (fibonacci/calc number)))
+  (println (str "Fibonacci for " number " is " (fibonacci/recursive-fib number)))
   (println (str ":::Caesar Cipher (Shift: " caesar-cipher/shift "):::"))
   (println (str "Plaintext: " plaintext " Ciphertext: " (caesar-cipher/encode plaintext)))
   (println (str "Plaintext: " (caesar-cipher/decode ciphertext) " Ciphertext: " ciphertext)))

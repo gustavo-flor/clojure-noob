@@ -21,3 +21,5 @@
   [social-security-numbers]
   (first (filter vampire?
                  (map vampire-related-details social-security-numbers))))
+
+(time (identify-vampire (vampire-database 0)))

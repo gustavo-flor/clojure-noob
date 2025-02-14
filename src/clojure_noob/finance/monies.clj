@@ -33,6 +33,10 @@
                 :currency currency}]
      (assoc money :display (display-money money)))))
 
+(defn rand-money
+  []
+  (new-money (rand-int 99999) ((rand-nth [:usd :brl :ukg]) currencies)))
+
 (def zero-money (new-money 0))
 
 (def hundred-dollars (new-money 10000 (:usd currencies)))
@@ -70,7 +74,6 @@
 
 (defn +$
   "Returns a Money object equal to the sum of the Money arguments"
-  ([m1] m1)
   ([m1 m2]
    (ensure-same-currency! m1 m2)
    (new-money (+ (:amount m1) (:amount m2)) (:currency m1)))
